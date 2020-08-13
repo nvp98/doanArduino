@@ -70,10 +70,10 @@ int getdoamdat()
 {
   int i = 0;
   int anaValue = 0;
-  for (i = 0; i < 10; i++)  //
+  for (i = 0; i < 5; i++)  //
   {
     anaValue += analogRead(pin_dam); //Đọc giá trị cảm biến độ ẩm đất
-    delay(50);   // Đợi đọc giá trị ADC
+    delay(10);   // Đợi đọc giá trị ADC
   }
   anaValue = anaValue / (i);
   anaValue = map(anaValue, 1023, 0, 0, 100); //Ít nước:0%  ==> Nhiều nước 100%
