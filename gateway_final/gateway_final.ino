@@ -9,13 +9,15 @@
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2); // set the LCD address to 0x27 for a 16 chars and 2 line display
 
-const char *ssid = "liv";
-const char *password = "12345679";
+const char *ssid = "VanTai";
+const char *password = "admin182";
 //const char* password = "1M@chthailai1";
 char path[] = "/";
-char host[] = "192.168.43.165";
+char host[] = "45.119.83.67";
+//char host[] = "192.168.43.165";
 //char host[] = "doangreenhouse.herokuapp.com";
-const int port = 5001;
+
+const int port = 3000;
 
 #define ss D8
 #define rst D4
@@ -65,7 +67,7 @@ void setup()
   delay(1000);
 
   // Connect to the websocket server
-  if (client.connect(host, 5001))
+  if (client.connect(host, port))
   {
     Serial.println("Connected Wifi");
   }
